@@ -8,94 +8,109 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header">
-    <nav class="nav-wrap">
-      <a class="brand-link" href="index.html"><img src="assets/logo.jpeg" alt="Radha Rani Milk & Delight logo"><span><strong>Radha Rani</strong><span>Milk & Delight</span></span></a>
-      <button id="menuBtn" class="menu-toggle" aria-label="Open menu"><span class="hamburger"></span></button>
-      <div class="desktop-nav">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <div class="nav-dropdown"><a href="products.html">Products Gallery v</a><div class="submenu"><a class="submenu-link" href="products.html#chhena">Chhena Sweets</a><a class="submenu-link" href="products.html#ghee">Ghee Mithai</a><a class="submenu-link" href="products.html#khoya">Khoya Mithai</a><a class="submenu-link" href="products.html#dry-fruit">Dry Fruit Mithai</a><a class="submenu-link" href="products.html#seasonal">Seasonal Mithai</a><a class="submenu-link" href="products.html#wedding">Wedding Boxes & Hampers</a></div></div>
-        <a href="contact.html">Contact Us</a>
-        <a class="nav-cta" href="order.html">Order Now</a>
+<body class="rr-site">
+  <div id="intro" class="rr-loader"><div class="rr-loader-bg"></div><div class="rr-loader-content"><div class="rr-loader-logo"><img src="assets/logo.jpeg" alt="Radha Rani Milk & Delight logo"></div><p>Mathura Vrindavan</p><h1>Radha Rani</h1><span>Milk & Delight</span></div></div>
+  <header class="rr-header">
+    <nav class="rr-nav rr-nav-main" aria-label="Primary navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="rr-nav-dropdown">
+        <a href="products.html">Products Gallery</a>
+        <div class="rr-nav-submenu">
+          <a href="products.html#chhena">Chhena Sweets</a>
+          <a href="products.html#ghee">Ghee Mithai</a>
+          <a href="products.html#khoya">Khoya Mithai</a>
+          <a href="products.html#dry-fruit">Dry Fruit Mithai</a>
+          <a href="products.html#seasonal">Seasonal Mithai</a>
+          <a href="products.html#wedding">Wedding Boxes & Hampers</a>
+        </div>
       </div>
+      <a class="rr-nav-logo" href="index.html" aria-label="Radha Rani home"><img src="assets/logo.jpeg" alt="Radha Rani Milk & Delight logo"></a>
+      <a href="contact.html">Contact Us</a>
+      <a class="rr-order-pill" href="order.html">Order Now</a>
     </nav>
+    <button id="menuBtn" class="rr-menu-toggle" aria-label="Open menu"><span class="hamburger"></span></button>
     <div id="mobileMenu" class="mobile-menu hidden"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products Gallery</a><a class="sub" href="products.html#chhena">Chhena Sweets</a><a class="sub" href="products.html#ghee">Ghee Mithai</a><a class="sub" href="products.html#khoya">Khoya Mithai</a><a class="sub" href="products.html#dry-fruit">Dry Fruit Mithai</a><a class="sub" href="products.html#seasonal">Seasonal Mithai</a><a class="sub" href="products.html#wedding">Wedding Boxes & Hampers</a><a href="contact.html">Contact Us</a><a href="order.html">Order Now</a></div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="decor-splash left"></div>
-      <div class="hero-inner">
-        <div>
-          <div class="hero-kicker">100% pure</div>
-          <h1>Fresh Milk & Delight</h1>
-          <p>Inspired by the Dairy Heritage of Mathura & the Trusted Legacy of Radha Rani Rasgulla.</p>
-          <div class="hero-actions"><a class="btn-dark" href="products.html">View Products</a><a class="btn-light" href="about.html">Our Legacy</a></div>
-        </div>
-        <div class="hero-art" aria-label="Radha Rani sweets and milk hero graphic">
-          <div class="milk-splash"></div>
-          <img class="hero-main-img" src="assets/hero-sweets.jpeg" alt="Premium Radha Rani sweets">
-          <img class="hero-drink" src="assets/badam-milk.jpeg" alt="Radha Rani Badam Milk">
-          <div class="hero-badge">Mathura<br>Heritage</div>
+    <section class="rr-home-hero">
+      <div class="rr-border-frame"></div>
+      <img class="rr-orn rr-orn-splash" src="assets/svg/milk-splash.svg" alt="">
+      <img class="rr-orn rr-orn-cow" src="assets/svg/cow-grazing.svg" alt="">
+      <div class="rr-home-copy">
+        <p class="rr-eyebrow">From the Trusted Legacy of Radha Rani Rasgulla</p>
+        <h1>Radha Rani Milk & Delight</h1>
+        <p class="rr-home-tagline">“Inspired by the Dairy Heritage of Mathura & the Trusted Legacy of Radha Rani Rasgulla”</p>
+        <div class="rr-home-actions"><a class="rr-primary-btn" href="about.html">Explore Our Legacy</a><a class="rr-secondary-btn" href="products.html">View Products</a></div>
+      </div>
+      <div class="rr-home-art">
+        <div class="rr-art-card">
+          <img src="assets/generated/home-hero-radha-rani.png" alt="Radha Rani with Mathura temple, peacocks, rasgulla and peda sweets">
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="decor-splash right"></div>
-      <div class="section-inner">
-        <div class="section-head">
-          <p class="section-kicker">Our Products</p>
-          <h2 class="section-title">Find all your sweets under one roof</h2>
-          <p class="section-subtitle">Chhena, ghee, khoya, dry fruit, seasonal mithai, and wedding hampers.</p>
-          <span class="red-underline"></span>
-        </div>
-        <div class="product-teaser">
-          <article class="product-card" style="--blob:#e8fbff"><img src="assets/chhena/chhena-01.jpg" alt="Chhena sweets"><h3>Chhena Sweets</h3><p>Soft rasgullas and rasmalai prepared with fresh chhena.</p></article>
-          <article class="product-card" style="--blob:#fff0cc"><img src="assets/ghee/ghee-02.jpg" alt="Ghee mithai"><h3>Ghee Mithai</h3><p>Pure desi ghee aroma with a melt-in-mouth festive finish.</p></article>
-          <article class="product-card" style="--blob:#ffe4e7"><img src="assets/seasonal/seasonal-03.jpg" alt="Wedding sweets"><h3>Wedding Hampers</h3><p>Elegant mithai assortments for weddings, puja, and gifting.</p></article>
-        </div>
+    <section class="rr-section rr-products">
+      <img class="rr-orn rr-orn-right" src="assets/svg/milk-splash.svg" alt="">
+      <div class="rr-section-head">
+        <p>Our Products</p>
+        <h2>Find all your traditional sweets under one roof</h2>
+        <span></span>
+      </div>
+      <div class="rr-card-grid">
+        <article class="rr-product-card blue"><img src="assets/chhena/chhena-01.jpg" alt="Chhena Sweets"><h3>Chhena Sweets</h3><p>Fresh chhena sweets prepared with devotion, just like offerings at Banke Bihari.</p></article>
+        <article class="rr-product-card gold"><img src="assets/ghee/ghee-02.jpg" alt="Ghee Mithai"><h3>Ghee Mithai</h3><p>Pure desi ghee richness with no adulterants and no shortcuts.</p></article>
+        <article class="rr-product-card rose"><img src="assets/seasonal/seasonal-03.jpg" alt="Wedding Boxes & Hampers"><h3>Wedding Boxes & Hampers</h3><p>Elegant assortments that bring festive joy to every occasion.</p></article>
       </div>
     </section>
 
-    <section class="section soft-section">
-      <div class="section-inner">
-        <div class="section-head">
-          <p class="section-kicker">Processing Capacity</p>
-          <h2 class="section-title">Treat your taste buds the healthy way</h2>
-          <span class="red-underline"></span>
-        </div>
-        <div class="capacity-grid">
-          <div class="feature"><span>1</span><strong>Fresh Chhena</strong><p>Made daily from pure milk, never with shortcuts or milk powder compromises.</p></div>
-          <div class="feature"><span>2</span><strong>Pure Desi Ghee</strong><p>Traditional richness, clean aroma, and trust in every festive box.</p></div>
-          <div class="feature"><span>3</span><strong>Premium Packaging</strong><p>Celebration-ready presentation for family rituals, weddings, and corporate gifting.</p></div>
-        </div>
+    <section class="rr-section rr-cream-band" id="quality">
+      <img class="rr-orn rr-orn-grass" src="assets/svg/grass-line.svg" alt="">
+      <div class="rr-section-head">
+        <p>Quality</p>
+        <h2>Purity, devotion, and premium craft</h2>
+        <span></span>
+      </div>
+      <div class="rr-quality-grid">
+        <div><strong>Pure Milk</strong><p>Milk is sourced with care from reliable local dairies for honest sweetness.</p></div>
+        <div><strong>Fresh Chhena & Khoya</strong><p>Chhena and khoya are prepared fresh daily with age-old techniques.</p></div>
+        <div><strong>Pure Desi Ghee</strong><p>Ghee is traditionally churned and never adulterated.</p></div>
       </div>
     </section>
 
-    <section class="section testimonial-band">
-      <div class="section-inner">
-        <div class="section-head">
-          <p class="section-kicker">Testimonials</p>
-          <h2 class="section-title">What customers say about us</h2>
-          <span class="red-underline"></span>
-        </div>
-        <div class="quote-card">
-          <div class="quote-avatar">RR</div>
-          <blockquote class="quote-text">Their chhena is so soft and fresh that you can taste the purity in every bite. The Rasgullas melt in your mouth just like the ones we grew up eating in the lanes of Mathura.<cite>-- Mrs. Shanti Devi Agarwal, Mathura</cite></blockquote>
-        </div>
+    <section class="rr-section rr-testimonials">
+      <div class="rr-section-head">
+        <p>Testimonials</p>
+        <h2>Loved for purity, trust, and Mathura taste</h2>
+        <span></span>
+      </div>
+      <div class="rr-testimonial-grid">
+        <blockquote><p>I have been buying sweets from Radha Rani for over a decade now. Their chhena is so soft and fresh that you can taste the purity in every bite.</p><cite>Mrs. Shanti Devi Agarwal · Mathura · Chhena Sweets</cite></blockquote>
+        <blockquote><p>We ordered the Dry Fruit Mithai box for my son's wedding, and every guest raved about it. Their attention to detail and packaging was impeccable.</p><cite>Mr. Rakesh Jain · Delhi · Dry Fruit Mithai</cite></blockquote>
+        <blockquote><p>What sets Radha Rani apart is their commitment to using pure desi ghee. You can smell the richness the moment you open the box.</p><cite>Mrs. Kavita Tiwari · Lucknow · Ghee Mithai & Seasonal Mithai</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="rr-section rr-story-preview">
+      <div class="rr-story-image"><img src="assets/badam-milk.jpeg" alt="Radha Rani Badam Milk"></div>
+      <div>
+        <p class="rr-eyebrow">Mathura Vrindavan Theme</p>
+        <h2>A living tribute to Mathura's centuries-old dairy legacy</h2>
+        <p>Radha Rani Milk & Delight is not merely a sweet shop. Every sweet we craft carries forward the taste, trust, and tradition that have made Mathura's milk-based confectionery beloved across India and beyond.</p>
+        <a class="rr-primary-btn" href="about.html">Read Our Story</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer-wave">
-    <div class="footer-inner">
-      <div><img class="footer-logo" src="assets/logo.jpeg" alt="Radha Rani logo"><p>Radha Rani Milk & Delight<br>Inspired by Mathura's Heritage -- Crafted with Purity</p></div>
+  <footer class="rr-footer">
+    <img class="rr-footer-cow" src="assets/svg/cow-grazing.svg" alt="">
+    <img class="rr-footer-grass" src="assets/svg/grass-line.svg" alt="">
+    <div class="rr-footer-inner">
+      <div><img class="rr-footer-logo" src="assets/logo.jpeg" alt="Radha Rani logo"><p>Radha Rani Milk & Delight<br>Inspired by Mathura's Heritage -- Crafted with Purity</p></div>
       <div><h3>Products</h3><a href="products.html#chhena">Chhena Sweets</a><a href="products.html#ghee">Ghee Mithai</a><a href="products.html#khoya">Khoya Mithai</a><a href="products.html#wedding">Wedding Hampers</a></div>
       <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products Gallery</a><a href="contact.html">Contact Us</a></div>
       <div><h3>Important Links</h3><a href="order.html">Order Now</a><a href="contact.html">Bulk Enquiry</a><a href="products.html#seasonal">Seasonal Mithai</a></div>

@@ -6,16 +6,37 @@
   <title>Products Gallery | Radha Rani Milk & Delight</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="site-header"><nav class="nav-wrap"><a class="brand-link" href="index.html"><img src="assets/logo.jpeg" alt="Radha Rani logo"><span><strong>Radha Rani</strong><span>Milk & Delight</span></span></a><button id="menuBtn" class="menu-toggle" aria-label="Open menu"><span class="hamburger"></span></button><div class="desktop-nav"><a href="index.html">Home</a><a href="about.html">About Us</a><div class="nav-dropdown"><a class="active" href="products.html">Products Gallery v</a><div class="submenu"><a class="submenu-link" href="#chhena">Chhena Sweets</a><a class="submenu-link" href="#ghee">Ghee Mithai</a><a class="submenu-link" href="#khoya">Khoya Mithai</a><a class="submenu-link" href="#dry-fruit">Dry Fruit Mithai</a><a class="submenu-link" href="#seasonal">Seasonal Mithai</a><a class="submenu-link" href="#wedding">Wedding Boxes & Hampers</a></div></div><a href="contact.html">Contact Us</a><a class="nav-cta" href="order.html">Order Now</a></div></nav><div id="mobileMenu" class="mobile-menu hidden"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products Gallery</a><a class="sub" href="#chhena">Chhena Sweets</a><a class="sub" href="#ghee">Ghee Mithai</a><a class="sub" href="#khoya">Khoya Mithai</a><a class="sub" href="#dry-fruit">Dry Fruit Mithai</a><a class="sub" href="#seasonal">Seasonal Mithai</a><a class="sub" href="#wedding">Wedding Boxes & Hampers</a><a href="contact.html">Contact Us</a><a href="order.html">Order Now</a></div></header>
+<body class="rr-site">
+  <header class="rr-header">
+    <nav class="rr-nav rr-nav-main" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="rr-nav-dropdown">
+        <a class="active" href="products.html">Products Gallery</a>
+        <div class="rr-nav-submenu">
+          <a href="products.html#chhena">Chhena Sweets</a>
+          <a href="products.html#ghee">Ghee Mithai</a>
+          <a href="products.html#khoya">Khoya Mithai</a>
+          <a href="products.html#dry-fruit">Dry Fruit Mithai</a>
+          <a href="products.html#seasonal">Seasonal Mithai</a>
+          <a href="products.html#wedding">Wedding Boxes & Hampers</a>
+        </div>
+      </div>
+      <a class="rr-nav-logo" href="index.html" aria-label="Radha Rani home"><img src="assets/logo.jpeg" alt="Radha Rani Milk & Delight logo"></a>
+      <a href="contact.html">Contact Us</a>
+      <a class="rr-order-pill" href="order.html">Order Now</a>
+    </nav>
+    <button id="menuBtn" class="rr-menu-toggle" aria-label="Open menu"><span class="hamburger"></span></button>
+    <div id="mobileMenu" class="mobile-menu hidden"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products Gallery</a><a class="sub" href="products.html#chhena">Chhena Sweets</a><a class="sub" href="products.html#ghee">Ghee Mithai</a><a class="sub" href="products.html#khoya">Khoya Mithai</a><a class="sub" href="products.html#dry-fruit">Dry Fruit Mithai</a><a class="sub" href="products.html#seasonal">Seasonal Mithai</a><a class="sub" href="products.html#wedding">Wedding Boxes & Hampers</a><a href="contact.html">Contact Us</a><a href="order.html">Order Now</a></div>
+  </header>
 
   <main>
     <section class="page-hero">
       <div class="page-hero-inner">
-        <div><p class="hero-kicker">Products Gallery</p><h1 class="page-title">Premium Mithai</h1><p class="page-copy">Goodness of fresh and pure milk as per your needs, presented with a refined Mathura-inspired identity.</p></div>
+        <div><p class="hero-kicker">Products Gallery</p><h1 class="page-title">Premium Mithai</h1><p class="page-copy">Explore Chhena Sweets, Ghee Mithai, Khoya Mithai, Dry Fruit Mithai, Seasonal Mithai, and Wedding Boxes & Hampers inspired by Mathura's dairy heritage.</p></div>
         <img class="page-hero-img" src="assets/seasonal/seasonal-03.jpg" alt="Radha Rani premium sweets">
       </div>
     </section>
@@ -24,7 +45,7 @@
       <div class="decor-splash left"></div><div class="decor-splash right"></div>
       <div class="section-inner">
         <div class="section-head"><p class="section-kicker">Choose Category</p><h2 class="section-title">All sweets under one roof</h2><span class="red-underline"></span></div>
-        <div class="filter-row" id="categoryFilters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="chhena">Chhena</button><button class="filter" data-filter="ghee">Ghee</button><button class="filter" data-filter="khoya">Khoya</button><button class="filter" data-filter="gifting">Hampers</button></div>
+        <div class="filter-row" id="categoryFilters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="chhena">Chhena Sweets</button><button class="filter" data-filter="ghee">Ghee Mithai</button><button class="filter" data-filter="khoya">Khoya Mithai</button><button class="filter" data-filter="dry-fruit">Dry Fruit Mithai</button><button class="filter" data-filter="seasonal">Seasonal Mithai</button><button class="filter" data-filter="wedding">Wedding Hampers</button></div>
         <div class="product-grid" id="productGrid"></div>
       </div>
     </section>
@@ -44,7 +65,7 @@
     </section>
   </main>
 
-  <footer class="footer-wave"><div class="footer-inner"><div><img class="footer-logo" src="assets/logo.jpeg" alt="Radha Rani logo"><p>Radha Rani Milk & Delight<br>Pure Milk. Pure Delight.</p></div><div><h3>Products</h3><a href="#chhena">Chhena Sweets</a><a href="#ghee">Ghee Mithai</a><a href="#khoya">Khoya Mithai</a><a href="#wedding">Wedding Hampers</a></div><div><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></div><div><h3>Important Links</h3><a href="order.html">Order Now</a><a href="#seasonal">Seasonal Mithai</a></div></div></footer>
+  <footer class="rr-footer"><img class="rr-footer-cow" src="assets/svg/cow-grazing.svg" alt=""><img class="rr-footer-grass" src="assets/svg/grass-line.svg" alt=""><div class="rr-footer-inner"><div><img class="rr-footer-logo" src="assets/logo.jpeg" alt="Radha Rani logo"><p>Radha Rani Milk & Delight<br>Inspired by Mathura's Heritage -- Crafted with Purity</p></div><div><h3>Products</h3><a href="#chhena">Chhena Sweets</a><a href="#ghee">Ghee Mithai</a><a href="#khoya">Khoya Mithai</a><a href="#wedding">Wedding Hampers</a></div><div><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products Gallery</a><a href="contact.html">Contact Us</a></div><div><h3>Important Links</h3><a href="order.html">Order Now</a><a href="contact.html">Bulk Enquiry</a><a href="#seasonal">Seasonal Mithai</a></div></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
