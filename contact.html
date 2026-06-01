@@ -11,6 +11,7 @@
 </head>
 <body class="rr-site">
   <header class="rr-header">
+    <a class="rr-mobile-logo" href="index.html" aria-label="Radha Rani home"><img src="assets/logo.jpeg" alt="Radha Rani Milk & Delight logo"></a>
     <nav class="rr-nav rr-nav-main" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -30,7 +31,28 @@
       <a class="rr-order-pill" href="order.html">Order Now</a>
     </nav>
     <button id="menuBtn" class="rr-menu-toggle" aria-label="Open menu"><span class="hamburger"></span></button>
-    <div id="mobileMenu" class="mobile-menu hidden"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products Gallery</a><a class="sub" href="products.html#chhena">Chhena Sweets</a><a class="sub" href="products.html#ghee">Ghee Mithai</a><a class="sub" href="products.html#khoya">Khoya Mithai</a><a class="sub" href="products.html#dry-fruit">Dry Fruit Mithai</a><a class="sub" href="products.html#seasonal">Seasonal Mithai</a><a class="sub" href="products.html#wedding">Wedding Boxes & Hampers</a><a href="contact.html">Contact Us</a><a href="order.html">Order Now</a></div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="mobile-dropdown">
+        <div class="mobile-dropdown-header">
+          <a href="products.html">Products Gallery</a>
+          <button class="mobile-dropdown-toggle" aria-label="Toggle sub-menu">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+        </div>
+        <div class="mobile-dropdown-content">
+          <a class="sub" href="products.html#chhena">Chhena Sweets</a>
+          <a class="sub" href="products.html#ghee">Ghee Mithai</a>
+          <a class="sub" href="products.html#khoya">Khoya Mithai</a>
+          <a class="sub" href="products.html#dry-fruit">Dry Fruit Mithai</a>
+          <a class="sub" href="products.html#seasonal">Seasonal Mithai</a>
+          <a class="sub" href="products.html#wedding">Wedding Boxes & Hampers</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact Us</a>
+      <a href="order.html">Order Now</a>
+    </div>
   </header>
   <main>
     <section class="page-hero"><div class="page-hero-inner"><div><p class="hero-kicker">From Farm to Family</p><h1 class="page-title">Contact Us</h1><p class="page-copy">We would love to hear from you for fresh mithai, bulk gifting, wedding hampers, and festival orders.</p></div><img class="page-hero-img" src="assets/seasonal/seasonal-05.jpg" alt="Radha Rani sweets collection"></div></section>

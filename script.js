@@ -354,11 +354,25 @@ filters.forEach(button => {
 
 if (menuBtn && mobileMenu) {
   menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('is-active');
+    menuBtn.classList.toggle('is-open');
   });
 
   mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('is-active');
+      menuBtn.classList.remove('is-open');
+    });
+  });
+
+  const mobileDropdowns = mobileMenu.querySelectorAll('.mobile-dropdown-toggle');
+  mobileDropdowns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const dropdown = btn.closest('.mobile-dropdown');
+      if (dropdown) dropdown.classList.toggle('is-expanded');
+    });
   });
 }
 

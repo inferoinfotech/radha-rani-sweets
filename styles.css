@@ -205,6 +205,7 @@ button:hover {
   width: 20px;
   border-radius: 999px;
   background: var(--ink);
+  transition: transform 0.3s ease, top 0.3s ease, background 0.3s ease;
 }
 
 .hamburger {
@@ -224,6 +225,20 @@ button:hover {
 
 .hamburger::after {
   top: 7px;
+}
+
+.is-open .hamburger {
+  background: transparent;
+}
+
+.is-open .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.is-open .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .mobile-menu {
@@ -251,6 +266,13 @@ button:hover {
 
 .mobile-menu:not(.hidden) {
   display: block;
+}
+
+@media (min-width: 981px) {
+  .mobile-menu,
+  .rr-site .mobile-menu {
+    display: none !important;
+  }
 }
 
 .hero {
@@ -1496,6 +1518,44 @@ button:hover {
   margin: 0 auto;
 }
 
+.rr-featured-grid {
+  display: grid;
+  gap: 26px;
+  max-width: 1240px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .rr-featured-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .rr-featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .rr-featured-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 18px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .rr-featured-grid > article {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+  .rr-featured-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .rr-product-card {
   position: relative;
   min-height: 360px;
@@ -2314,11 +2374,22 @@ button:hover {
     max-height: calc(100vh - 118px);
     overflow-y: auto;
     border: 1px solid rgba(184, 137, 44, .22);
-    border-radius: 0;
+    border-radius: 20px;
     background: rgba(255, 255, 255, .98);
     padding: 20px 26px 24px;
     box-shadow: 0 24px 70px rgba(68, 43, 12, .18);
+    opacity: 0;
+    transform: translateY(-12px) scale(0.98);
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  }
+
+  .rr-site .mobile-menu.is-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
     pointer-events: auto;
+    visibility: visible;
   }
 
   .rr-site .mobile-menu a {
@@ -2332,6 +2403,52 @@ button:hover {
     color: #5e432e;
     font-size: .94rem;
     font-weight: 900;
+  }
+
+  .rr-site .mobile-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .rr-site .mobile-dropdown-header a {
+    flex: 1;
+  }
+  
+  .rr-site .mobile-dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 10px;
+    margin-right: -10px;
+    cursor: pointer;
+    color: #5e432e;
+    transition: transform 0.3s ease;
+  }
+  
+  .rr-site .mobile-dropdown.is-expanded .mobile-dropdown-toggle {
+    transform: rotate(180deg);
+  }
+  
+  .rr-site .mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, margin 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+    background: #fbf9f6;
+    border-radius: 16px;
+    margin: 0;
+    padding: 0 16px;
+    opacity: 0;
+  }
+  
+  .rr-site .mobile-dropdown.is-expanded .mobile-dropdown-content {
+    max-height: 400px;
+    margin: 8px 0 12px;
+    padding: 8px 16px;
+    opacity: 1;
+  }
+  
+  .rr-site .mobile-dropdown.is-expanded .mobile-dropdown-content a.sub {
+    padding-left: 0;
   }
 
   .rr-home-hero,
@@ -2693,9 +2810,33 @@ button:hover {
   transform: scale(.62);
 }
 
+.rr-mobile-logo {
+  display: none;
+  pointer-events: auto;
+}
+
 @media (max-width: 980px) {
   .rr-header {
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .rr-site .rr-mobile-logo {
+    display: block;
+    position: fixed;
+    top: 23px;
+    left: 24px;
+    z-index: 140;
+    height: 58px;
+    width: 58px;
+  }
+
+  .rr-site .rr-mobile-logo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(120, 82, 20, 0.2);
   }
 
   .rr-nav {

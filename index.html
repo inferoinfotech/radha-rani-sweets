@@ -14,6 +14,7 @@
 <body class="rr-site">
   <div id="intro" class="rr-loader"><div class="rr-loader-bg"></div><div class="rr-loader-content"><div class="rr-loader-logo"><img src="assets/logo.jpeg" alt="Radha Rani Milk & Delight logo"></div><p>Mathura Vrindavan</p><h1>Radha Rani</h1><span>Milk & Delight</span></div></div>
   <header class="rr-header">
+    <a class="rr-mobile-logo" href="index.html" aria-label="Radha Rani home"><img src="assets/logo.jpeg" alt="Radha Rani Milk & Delight logo"></a>
     <nav class="rr-nav rr-nav-main" aria-label="Primary navigation">
       <a class="active" href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -33,7 +34,28 @@
       <a class="rr-order-pill" href="order.html">Order Now</a>
     </nav>
     <button id="menuBtn" class="rr-menu-toggle" aria-label="Open menu"><span class="hamburger"></span></button>
-    <div id="mobileMenu" class="mobile-menu hidden"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products Gallery</a><a class="sub" href="products.html#chhena">Chhena Sweets</a><a class="sub" href="products.html#ghee">Ghee Mithai</a><a class="sub" href="products.html#khoya">Khoya Mithai</a><a class="sub" href="products.html#dry-fruit">Dry Fruit Mithai</a><a class="sub" href="products.html#seasonal">Seasonal Mithai</a><a class="sub" href="products.html#wedding">Wedding Boxes & Hampers</a><a href="contact.html">Contact Us</a><a href="order.html">Order Now</a></div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="mobile-dropdown">
+        <div class="mobile-dropdown-header">
+          <a href="products.html">Products Gallery</a>
+          <button class="mobile-dropdown-toggle" aria-label="Toggle sub-menu">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+        </div>
+        <div class="mobile-dropdown-content">
+          <a class="sub" href="products.html#chhena">Chhena Sweets</a>
+          <a class="sub" href="products.html#ghee">Ghee Mithai</a>
+          <a class="sub" href="products.html#khoya">Khoya Mithai</a>
+          <a class="sub" href="products.html#dry-fruit">Dry Fruit Mithai</a>
+          <a class="sub" href="products.html#seasonal">Seasonal Mithai</a>
+          <a class="sub" href="products.html#wedding">Wedding Boxes & Hampers</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact Us</a>
+      <a href="order.html">Order Now</a>
+    </div>
   </header>
 
   <main>
@@ -65,6 +87,41 @@
         <article class="rr-product-card blue"><img src="assets/chhena/chhena-01.jpg" alt="Chhena Sweets"><h3>Chhena Sweets</h3><p>Fresh chhena sweets prepared with devotion, just like offerings at Banke Bihari.</p></article>
         <article class="rr-product-card gold"><img src="assets/ghee/ghee-02.jpg" alt="Ghee Mithai"><h3>Ghee Mithai</h3><p>Pure desi ghee richness with no adulterants and no shortcuts.</p></article>
         <article class="rr-product-card rose"><img src="assets/seasonal/seasonal-03.jpg" alt="Wedding Boxes & Hampers"><h3>Wedding Boxes & Hampers</h3><p>Elegant assortments that bring festive joy to every occasion.</p></article>
+      </div>
+    </section>
+
+    <section class="rr-section rr-featured-products soft-section">
+      <div class="rr-section-head">
+        <p>Featured</p>
+        <h2>Featured Products</h2>
+        <span></span>
+      </div>
+      <div class="rr-featured-grid">
+        <article class="rr-product-card blue">
+          <img src="assets/khoya/khoya-01.jpg" alt="Mathura Peda">
+          <h3>Mathura Peda</h3>
+          <p>The iconic taste of Mathura, made with rich, slow-cooked khoya.</p>
+        </article>
+        <article class="rr-product-card gold">
+          <img src="assets/chhena/chhena-01.jpg" alt="Classic Rasgulla">
+          <h3>Classic Rasgulla</h3>
+          <p>Soft and spongy chhena soaked in lightly sweetened syrup.</p>
+        </article>
+        <article class="rr-product-card rose">
+          <img src="assets/ghee/ghee-01.jpg" alt="Besan Ladoo">
+          <h3>Besan Ladoo</h3>
+          <p>Roasted to perfection in pure desi ghee for a melt-in-mouth texture.</p>
+        </article>
+        <article class="rr-product-card blue">
+          <img src="assets/khoya/khoya-02.jpg" alt="Milk Cake">
+          <h3>Milk Cake</h3>
+          <p>A classic grainy fudge crafted from pure milk and devotion.</p>
+        </article>
+        <article class="rr-product-card gold">
+          <img src="assets/chhena/chhena-02.jpg" alt="Rasmalai">
+          <h3>Rasmalai</h3>
+          <p>Delicate chhena discs dipped in saffron-infused thickened milk.</p>
+        </article>
       </div>
     </section>
 
