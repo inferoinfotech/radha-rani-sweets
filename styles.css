@@ -2299,6 +2299,18 @@ button:hover {
   display: none;
 }
 
+.rr-orn,
+.rr-footer-cow,
+.rr-footer-grass,
+.decor-splash,
+.rr-site .page-hero::before,
+.rr-site .page-hero::after,
+.rr-site .section:has(.product-grid)::before,
+.rr-site .section:has(.rr-card-grid)::before,
+.rr-footer::after {
+  display: none !important;
+}
+
 .rr-footer-inner {
   background: rgba(255, 253, 244, .52);
   backdrop-filter: blur(2px);
