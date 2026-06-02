@@ -361,7 +361,7 @@ function updateCategoryHeading(filter) {
   if (pageTitle) pageTitle.textContent = meta.title;
   if (pageCopy) pageCopy.textContent = meta.copy;
   if (sectionTitle) sectionTitle.textContent = meta.title;
-  if (productGrid) document.title = meta.title + ' | Radha Rani Milk & Delight';
+  if (productGrid) document.title = meta.title + ' | Radha Rani Milk Delight';
 }
 
 function renderProducts(filter = 'chhena') {
@@ -374,12 +374,12 @@ function renderProducts(filter = 'chhena') {
 
   productGrid.innerHTML = visible.map(product =>
     '<article class="product-card" data-type="' + product.type + '">' +
-      '<img src="' + product.image + '" alt="' + product.name + '" loading="lazy">' +
-      '<div class="body">' +
-        '<span class="tag">' + product.tag + '</span>' +
-        '<h3>' + product.name + '</h3>' +
-        '<p>' + product.desc + '</p>' +
-      '</div>' +
+    '<img src="' + product.image + '" alt="' + product.name + '" loading="lazy">' +
+    '<div class="body">' +
+    '<span class="tag">' + product.tag + '</span>' +
+    '<h3>' + product.name + '</h3>' +
+    '<p>' + product.desc + '</p>' +
+    '</div>' +
     '</article>'
   ).join('');
 
@@ -401,12 +401,12 @@ function renderHomeProducts(filter = 'chhena') {
 
   homeProductGrid.innerHTML = visible.map(product =>
     '<article class="product-card" data-type="' + product.type + '">' +
-      '<img src="' + product.image + '" alt="' + product.name + '" loading="lazy">' +
-      '<div class="body">' +
-        '<span class="tag">' + product.tag + '</span>' +
-        '<h3>' + product.name + '</h3>' +
-        '<p>' + product.desc + '</p>' +
-      '</div>' +
+    '<img src="' + product.image + '" alt="' + product.name + '" loading="lazy">' +
+    '<div class="body">' +
+    '<span class="tag">' + product.tag + '</span>' +
+    '<h3>' + product.name + '</h3>' +
+    '<p>' + product.desc + '</p>' +
+    '</div>' +
     '</article>'
   ).join('');
 
