@@ -5105,13 +5105,530 @@ button:hover {
   background-size: cover !important;
 }
 
-.rr-site .rr-story-preview + .soft-section,
-.rr-site .rr-story-preview + .soft-section::before,
-.rr-site .rr-story-preview + .soft-section::after {
+.rr-site .rr-story-preview+.soft-section,
+.rr-site .rr-story-preview+.soft-section::before,
+.rr-site .rr-story-preview+.soft-section::after {
   background: #fff !important;
   background-image: none !important;
 }
 
-.rr-site .rr-story-preview + .soft-section {
+.rr-site .rr-story-preview+.soft-section {
   margin-top: 0 !important;
+}
+
+/* Home page: full-screen edge-to-edge hero image */
+.rr-site .rr-ms-hero {
+  min-height: 100svh !important;
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  display: grid !important;
+  grid-template-columns: minmax(280px, 620px) !important;
+  align-items: center !important;
+  padding:
+    calc(88px + clamp(36px, 8vh, 84px)) clamp(22px, 8vw, 132px) clamp(54px, 9vh, 104px) !important;
+  background-color: #fff !important;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, .98) 0%, rgba(255, 255, 255, .88) 34%, rgba(255, 255, 255, .36) 58%, rgba(255, 255, 255, .08) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, .22), rgba(0, 0, 0, .02) 48%, rgba(255, 255, 255, .2)),
+    url("assets/chhena/chhena-01.jpg") !important;
+  background-position: center right !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+}
+
+.rr-site .rr-ms-hero-media {
+  display: none !important;
+}
+
+.rr-site .rr-ms-hero-copy {
+  max-width: 620px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.rr-site .rr-ms-hero-copy h1 {
+  max-width: 580px !important;
+  color: #050505 !important;
+}
+
+.rr-site .rr-ms-hero-copy span {
+  max-width: 500px !important;
+  color: #151515 !important;
+}
+
+@media (max-width: 760px) {
+  .rr-site .rr-ms-hero {
+    min-height: 100svh !important;
+    align-items: end !important;
+    padding: 106px 22px 54px !important;
+    background-image:
+      linear-gradient(0deg, rgba(255, 255, 255, .98) 0%, rgba(255, 255, 255, .9) 34%, rgba(255, 255, 255, .22) 72%, rgba(255, 255, 255, .08) 100%),
+      linear-gradient(90deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, .02)),
+      url("assets/chhena/chhena-01.jpg") !important;
+    background-position: center !important;
+  }
+
+  .rr-site .rr-ms-hero-copy {
+    max-width: 390px !important;
+  }
+
+  .rr-site .rr-ms-hero-copy h1 {
+    max-width: 360px !important;
+  }
+}
+
+/* Contact page: image-only edge-to-edge hero banner */
+.rr-site .page-hero.contact-image-hero {
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100svh !important;
+  min-height: 640px !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background-color: #fff !important;
+  background-image: url("assets/seasonal/seasonal-05.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.rr-site .contact-image-hero::before,
+.rr-site .contact-image-hero::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.rr-site .page-hero.contact-image-hero .contact-hero-img {
+  display: none !important;
+  width: 100% !important;
+  height: 100vh !important;
+  height: 100% !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.rr-site .contact-intro {
+  max-width: 760px;
+  margin: 0 auto clamp(24px, 4vw, 42px);
+  text-align: center;
+}
+
+.rr-site .contact-intro .hero-kicker {
+  margin-bottom: 6px;
+}
+
+.rr-site .contact-intro .page-title {
+  margin: 0;
+}
+
+.rr-site .contact-intro .page-copy {
+  max-width: 640px;
+  margin: 12px auto 0;
+}
+
+.rr-site .contact-cards .contact-card {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.rr-site .contact-grid .story-img,
+.rr-site .contact-grid .lux-form {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 760px) {
+  .rr-site .page-hero.contact-image-hero {
+    height: 100vh !important;
+    height: 100svh !important;
+    min-height: 520px !important;
+  }
+
+  .rr-site .contact-hero-img {
+    object-position: center !important;
+  }
+}
+
+/* Home page: image-only banner with intro below */
+.rr-site .rr-ms-hero.rr-home-banner {
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100svh !important;
+  min-height: 640px !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background-color: #fff !important;
+  background-image: url("assets/generated/homepage-return.jpeg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.rr-site .rr-ms-hero.rr-home-banner::before,
+.rr-site .rr-ms-hero.rr-home-banner::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.rr-site .rr-home-intro-section {
+  background: #fff !important;
+  padding-top: clamp(54px, 8vw, 92px) !important;
+  padding-bottom: clamp(26px, 5vw, 56px) !important;
+}
+
+.rr-site .rr-home-intro {
+  max-width: 820px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.rr-site .rr-home-intro h1 {
+  max-width: 720px !important;
+  margin-inline: auto !important;
+}
+
+.rr-site .rr-home-intro span {
+  max-width: 660px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 760px) {
+  .rr-site .rr-ms-hero.rr-home-banner {
+    height: 100vh !important;
+    height: 100svh !important;
+    min-height: 520px !important;
+    background-image: url("assets/generated/homepage-retuen-mob.jpeg") !important;
+    background-position: center !important;
+  }
+
+  .rr-site .rr-home-intro-section {
+    padding: 46px 0 26px !important;
+  }
+
+  .rr-site .rr-home-intro {
+    max-width: 360px !important;
+  }
+}
+
+/* Product submenu pages: image-only full-screen banners with title below */
+.rr-site[data-product-category] .page-hero.product-image-hero {
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100svh !important;
+  min-height: 640px !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background-color: #fff !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.rr-site[data-product-category="chhena"] .page-hero.product-image-hero {
+  background-image: url("assets/chhena/chhena-01.jpg") !important;
+}
+
+.rr-site[data-product-category="ghee"] .page-hero.product-image-hero {
+  background-image: url("assets/ghee/ghee-01.jpg") !important;
+}
+
+.rr-site[data-product-category="khoya"] .page-hero.product-image-hero {
+  background-image: url("assets/khoya/khoya-01.jpg") !important;
+}
+
+.rr-site[data-product-category="dry-fruit"] .page-hero.product-image-hero,
+.rr-site[data-product-category="seasonal"] .page-hero.product-image-hero,
+.rr-site[data-product-category="wedding"] .page-hero.product-image-hero {
+  background-image: url("assets/seasonal/seasonal-03.jpg") !important;
+}
+
+.rr-site[data-product-category] .page-hero.product-image-hero::before,
+.rr-site[data-product-category] .page-hero.product-image-hero::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.rr-site[data-product-category] .page-hero.product-image-hero .product-hero-img {
+  display: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.rr-site[data-product-category] .product-list-section {
+  background: #fff !important;
+  padding-top: clamp(54px, 8vw, 92px) !important;
+}
+
+.rr-site[data-product-category] .product-page-intro {
+  max-width: 820px;
+  margin: 0 auto clamp(34px, 5vw, 58px);
+  text-align: center;
+}
+
+.rr-site[data-product-category] .product-page-intro .hero-kicker {
+  margin-bottom: 6px;
+}
+
+.rr-site[data-product-category] .product-page-intro .page-title {
+  margin: 0;
+}
+
+.rr-site[data-product-category] .product-page-intro .page-copy {
+  max-width: 660px;
+  margin: 12px auto 0;
+}
+
+.rr-site[data-product-category] .product-grid .product-card,
+.rr-site[data-product-category] .product-grid .rr-product-card {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 760px) {
+  .rr-site[data-product-category] .page-hero.product-image-hero {
+    height: 100vh !important;
+    height: 100svh !important;
+    min-height: 520px !important;
+  }
+
+  .rr-site[data-product-category] .product-list-section {
+    padding-top: 46px !important;
+  }
+
+  .rr-site[data-product-category] .product-page-intro {
+    max-width: 360px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Order page: image-only full-screen banner with order intro below */
+.rr-site .page-hero.order-image-hero {
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100svh !important;
+  min-height: 640px !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background-color: #fff !important;
+  background-image: url("assets/seasonal/seasonal-11.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.rr-site .page-hero.order-image-hero::before,
+.rr-site .page-hero.order-image-hero::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.rr-site .page-hero.order-image-hero .order-hero-img {
+  display: none !important;
+}
+
+.rr-site .order-list-section {
+  background: #fff !important;
+  padding-top: clamp(54px, 8vw, 92px) !important;
+}
+
+.rr-site .order-page-intro {
+  max-width: 820px;
+  margin: 0 auto clamp(34px, 5vw, 58px);
+  text-align: center;
+}
+
+.rr-site .order-page-intro .hero-kicker {
+  margin-bottom: 6px;
+}
+
+.rr-site .order-page-intro .page-title {
+  margin: 0;
+}
+
+.rr-site .order-page-intro .page-copy {
+  max-width: 660px;
+  margin: 12px auto 0;
+}
+
+.rr-site .order-grid .lux-form,
+.rr-site .order-grid .feature {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 760px) {
+  .rr-site .page-hero.order-image-hero {
+    height: 100vh !important;
+    height: 100svh !important;
+    min-height: 520px !important;
+  }
+
+  .rr-site .order-list-section {
+    padding-top: 46px !important;
+  }
+
+  .rr-site .order-page-intro {
+    max-width: 360px;
+    margin-bottom: 30px;
+  }
+}
+
+/* About page: image-only full-screen banner with intro below */
+.rr-site .rr-page-hero.about-image-hero {
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100svh !important;
+  min-height: 640px !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background-color: #fff !important;
+  background-image: url("assets/generated/about.jpeg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.rr-site .rr-page-hero.about-image-hero::before,
+.rr-site .rr-page-hero.about-image-hero::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.rr-site .rr-page-hero.about-image-hero > div,
+.rr-site .rr-page-hero.about-image-hero .about-hero-img {
+  display: none !important;
+}
+
+.rr-site .about-intro-section {
+  background: #fff !important;
+  padding-top: clamp(54px, 8vw, 92px) !important;
+  padding-bottom: clamp(24px, 4vw, 48px) !important;
+}
+
+.rr-site .about-page-intro {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rr-site .about-page-intro .rr-eyebrow {
+  margin-bottom: 8px;
+}
+
+.rr-site .about-page-intro h1 {
+  max-width: 760px;
+  margin: 0 auto;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  font-weight: 700;
+  line-height: .93;
+}
+
+.rr-site .about-page-intro p:not(.rr-eyebrow) {
+  max-width: 720px;
+  margin: 16px auto 0;
+  font-weight: 800;
+  line-height: 1.65;
+}
+
+.rr-site .rr-about-story .rr-story-image,
+.rr-site .rr-about-story .rr-mini-grid > div,
+.rr-site .rr-quality-grid > div {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 760px) {
+  .rr-site .rr-page-hero.about-image-hero {
+    height: 100vh !important;
+    height: 100svh !important;
+    min-height: 520px !important;
+    background-image: url("assets/generated/about-mob.jpeg") !important;
+    background-position: center !important;
+  }
+
+  .rr-site .about-intro-section {
+    padding-top: 46px !important;
+  }
+
+  .rr-site .about-page-intro {
+    max-width: 360px;
+  }
+
+  .rr-site .about-page-intro h1 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
 }
