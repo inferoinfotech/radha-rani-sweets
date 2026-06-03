@@ -324,12 +324,14 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.18 });
 
 function observeRevealItems(scope = document) {
-  scope.querySelectorAll('.product-card, .rr-product-card, .feature, .value-card, .contact-card, .quote-card, .rr-quality-grid > div, .rr-mini-grid > div').forEach((item) => {
+  const revealItems = scope.querySelectorAll('.product-card, .rr-product-card, .feature, .value-card, .contact-card, .quote-card, .rr-quality-grid > div, .rr-mini-grid > div, .rr-testimonial-card, .lux-form, .story-img, .rr-story-image');
+  revealItems.forEach((item, index) => {
     if (item.dataset.revealReady) return;
     item.dataset.revealReady = 'true';
     item.style.opacity = '0';
     item.style.transform = 'translateY(22px)';
     item.style.transition = 'opacity .65s ease, transform .65s ease';
+    item.style.transitionDelay = Math.min(index * 55, 220) + 'ms';
     revealObserver.observe(item);
   });
 }
