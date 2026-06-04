@@ -5775,8 +5775,10 @@ button:hover {
   background-image: url("assets/seasonal/seasonal-10.jpg");
 }
 
-.rr-site .rr-home-slide-wedding {
+.rr-site .rr-home-banner-slider .rr-home-slide-wedding {
   background-image: url("assets/generated/sweet-banner.png");
+  background-position: center top;
+  transform-origin: center top;
 }
 
 .rr-site .rr-home-slide-contact {
@@ -5857,8 +5859,9 @@ button:hover {
     background-image: url("assets/generated/home-about-mob.png");
   }
 
-  .rr-site .rr-home-slide-wedding {
+  .rr-site .rr-home-banner-slider .rr-home-slide-wedding {
     background-image: url("assets/generated/sweet-banner-mob.png");
+    background-position: center top;
   }
 
   .rr-site .rr-home-banner-arrow {
