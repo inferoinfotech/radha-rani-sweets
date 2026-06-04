@@ -3713,6 +3713,12 @@ button:hover {
   filter: saturate(1.08) contrast(1.04);
 }
 
+.rr-home-footer-banner img {
+  height: clamp(360px, 52vw, 720px);
+  object-fit: cover;
+  object-position: center top;
+}
+
 .rr-section,
 .rr-site .section,
 .rr-site .rr-products,
@@ -6014,7 +6020,7 @@ button:hover {
 
 /* Header in normal flow: edge-to-edge banners start directly below the navbar */
 .rr-site {
-  --rr-header-flow-space: 82px;
+  --rr-header-flow-space: 75px;
 }
 
 .rr-site .rr-header {
@@ -6056,4 +6062,14 @@ button:hover {
 .rr-site[data-product-category] .page-hero.product-image-hero {
   min-height: calc(100vh - var(--rr-header-flow-space)) !important;
   min-height: calc(100svh - var(--rr-header-flow-space)) !important;
+}
+
+.rr-site .rr-ms-hero.rr-home-banner,
+.rr-site .page-hero.product-image-hero,
+.rr-site .page-hero.contact-image-hero,
+.rr-site .page-hero.order-image-hero,
+.rr-site .rr-page-hero.about-image-hero {
+  height: calc(100svh - var(--rr-header-flow-space)) !important;
+  min-height: 0 !important;
+  max-height: calc(100svh - var(--rr-header-flow-space)) !important;
 }
